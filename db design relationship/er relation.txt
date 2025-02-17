@@ -1,0 +1,16 @@
+Relationship Overview:
+appointments <-> staff: One-to-many (1:N) relationship. Each appointment involves one staff member, but each staff member can handle multiple appointments.
+appointments <-> users (customers): One-to-many (1:N) relationship. Each appointment involves one customer, but each customer can book multiple appointments.
+appointments <-> services: Many-to-many (M:N) relationship, facilitated by the appointmentsservices table. Each appointment can have multiple services, and each service can be part of many appointments.
+staff <-> services: Many-to-many (M:N) relationship, facilitated by the staffservices table. Each staff member can provide multiple services, and each service can be provided by multiple staff members.
+staff <-> users: One-to-many (1:N) relationship. Each staff member is associated with one user, and each user can correspond to one staff member (this is typically used for authentication and login).
+payments <-> appointments: One-to-one (1:1) or one-to-many (1:N) relationship, depending on how payment is structured in your system. Each appointment may have a corresponding payment.
+payments <-> users: Many-to-one (M:1) relationship. A user can make multiple payments (if payments are linked to users directly).
+users <-> roles: Many-to-one (M:1) relationship. Each user has one role, but each role can be assigned to multiple users.
+Key Dependencies:
+Foreign Keys:
+appointments relies on users, staff, and services (through foreign keys CustomerId, StaffId, and ServiceId).
+payments relies on users and appointments (through foreign keys UserId and AppointmentId).
+staff relies on users (through the UserId foreign key).
+appointmentsservices connects appointments and services with a composite foreign key (AppointmentId, ServiceId).
+staffservices connects staff and services with a composite foreign key (StaffId, ServiceId).
