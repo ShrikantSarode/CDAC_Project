@@ -1,0 +1,499 @@
+ .container-fluid {
+  padding: 20px;
+}
+
+.table {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+body {
+    overflow-x: hidden;
+  }
+  
+  .container-fluid {
+    padding: 0 15px;
+  }
+  
+  .row {
+    margin: 0;
+  }
+  
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  input, select, button {
+    max-width: 100%;
+  }
+  
+
+  .appointment-card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .appointment-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    font-size: 0.9em;
+  }
+  
+  .status-badge.completed {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .status-badge.pending {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .payment-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    font-size: 0.9em;
+  }
+  
+  .payment-badge.paid {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .payment-badge.pending {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height:600px;
+    overflow: scroll !important;
+  }
+  
+  .appointment-info p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+  }
+  /* General Styles */
+.container-fluid {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  /* Header Animations */
+  h2 {
+    position: relative;
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Card Styles and Animations */
+  .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card-header {
+    border-radius: 15px 15px 0 0 !important;
+    background: linear-gradient(45deg, #ffc107, #ffc107);
+    color: white;
+    padding: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-footer {
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Badge Styles */
+  .badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    animation: scaleBadge 0.3s ease-out;
+  }
+  
+  @keyframes scaleBadge {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-success {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    border: none;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    border: none;
+  }
+  
+  /* Modal Styles
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: fadeBackground 0.3s ease-out;
+  } */
+  
+  @keyframes fadeBackground {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .modal-dialog {
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* .modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    border-radius: 15px 15px 0 0;
+  } */
+  
+  /* Form Styles */
+  .form-control, .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+  }
+  
+  /* Status and Payment Badge Custom Styles */
+  .bg-success {
+      background: linear-gradient(45deg, #4CAF50, #45a049) !important;
+  }
+  
+  .bg-warning {
+      background: linear-gradient(45deg, #FFC107, #FFB300) !important;
+  }
+  
+  .bg-danger {
+      background: linear-gradient(45deg, #f44336, #e53935) !important;
+  }
+  
+  .bg-primary {
+      background: linear-gradient(45deg, #2196F3, #1976D2) !important;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+      .card {
+          margin-bottom: 20px;
+      }
+      
+      .btn {
+          padding: 6px 15px;
+      }
+      
+      .modal-dialog {
+          margin: 10px;
+      }
+  }
+  
+  /* Loading Animation for Buttons */
+  .btn:active {
+      animation: buttonPress 0.2s ease-out;
+  }
+  
+  @keyframes buttonPress {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+  }
+  
+  /* Hover Effects for Cards */
+  .card:hover .card-header {
+      background: linear-gradient(45deg, #45a049, #4CAF50);
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+      width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background: #4CAF50;
+      border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+      background: #45a049;
+  }
+  /* Edit Form Modal Specific Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-dialog {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    animation: modalSlideIn 0.4s ease-out;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    padding: 20px;
+    color: white;
+    border: none;
+}
+
+.modal-body {
+    padding: 30px;
+    background: #f8fafc;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Modal Buttons */
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+    background: white;
+}
+
+.modal-footer .btn {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form Group Animations */
+.mb-3 {
+    animation: formGroupSlide 0.4s ease-out;
+    animation-fill-mode: both;
+}
+
+.mb-3:nth-child(1) { animation-delay: 0.1s; }
+.mb-3:nth-child(2) { animation-delay: 0.2s; }
+.mb-3:nth-child(3) { animation-delay: 0.3s; }
+.mb-3:nth-child(4) { animation-delay: 0.4s; }
+.mb-3:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes formGroupSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .form-control, .form-select {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}

@@ -1,0 +1,101 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  padding: 20px;
+}
+
+.signup-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; /* Increased width for two-column layout */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: slideIn 0.5s ease-out;
+}
+
+.signup-title {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Two-column layout */
+.row {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.row .form-group {
+  flex: 1;
+  min-width: 45%; /* Ensures two fields in one row */
+}
+
+/* Form fields */
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #34495e;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #84fab0;
+  box-shadow: 0 0 0 3px rgba(132, 250, 176, 0.1);
+  outline: none;
+}
+
+/* Button */
+.signup-button {
+  width: 100%;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(132, 250, 176, 0.3);
+}
+
+/* Responsive: Stack fields vertically on small screens */
+@media (max-width: 480px) {
+  .signup-box {
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row .form-group {
+    min-width: 100%;
+  }
+}

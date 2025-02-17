@@ -1,0 +1,226 @@
+/* Hero Section */
+.hero-section {
+    margin-top: 100px;
+    padding: 4rem 0;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .heading-1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    animation: slideInLeft 1s ease;
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    animation: slideInLeft 1.2s ease;
+  }
+  
+  .book-btn {
+    background: linear-gradient(45deg, #f1c40f, #f39c12);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+    transition: all 0.3s ease;
+    animation: bounceIn 1s ease;
+  }
+  
+  .book-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+  }
+  
+  /* Services Section */
+  .services-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1s ease;
+  }
+  
+  .services-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #f1c40f;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .service-card p {
+    color: #34495e;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+  
+  /* Feature Sections */
+  .feature-section {
+    padding: 4rem 0;
+    animation: fadeIn 1s ease;
+  }
+  
+  .feature-image {
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    animation: slideInLeft 1s ease;
+  }
+  
+  .feature-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .feature-content {
+    padding: 2rem;
+    animation: slideInRight 1s ease;
+  }
+  
+  .feature-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-text {
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(0.89);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heading-1 {
+      font-size: 2.5rem;
+    }
+    
+    .feature-section {
+      text-align: center;
+    }
+    
+    .feature-image {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* Hover Effects */
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 196, 15, 0.1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: -1;
+  }
+  
+  .service-card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+    

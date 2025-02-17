@@ -1,0 +1,301 @@
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  .payment-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .payment-card h2 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .amount-input {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .amount-input:focus {
+    border-color: #3399cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(51, 153, 204, 0.1);
+  }
+  
+  .pay-button {
+    background: linear-gradient(135deg, #3399cc 0%, #2779bd 100%);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pay-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(51, 153, 204, 0.3);
+  }
+  
+  .pay-button:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .payment-card {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+  }
+  .payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+  }
+  
+  .payment-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    animation: cardFloat 0.8s ease-out;
+    backdrop-filter: blur(10px);
+  }
+  
+  .payment-card h2 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: formSlideUp 0.6s ease-out;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .form-group label {
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .amount-input {
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .amount-input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .pay-button, .back-button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .pay-button:hover:not(:disabled), 
+  .back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .pay-button:active:not(:disabled), 
+  .back-button:active {
+    transform: translateY(-1px);
+  }
+  
+  .pay-button:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+  }
+  
+  .qr-code-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    animation: qrCodeFadeIn 0.6s ease-out;
+  }
+  
+  .qr-code-section p {
+    color: #4a5568;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .qr-code-section svg {
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: qrCodePulse 2s infinite;
+  }
+  
+  /* Animations */
+  @keyframes cardFloat {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes formSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes qrCodeFadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes qrCodePulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Glass Morphism Effect */
+  .payment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
+    z-index: -1;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 480px) {
+    .payment-card {
+      padding: 1.5rem;
+    }
+  
+    .payment-card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .amount-input, 
+    .pay-button, 
+    .back-button {
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+  
+    .qr-code-section svg {
+      width: 180px !important;
+      height: 180px !important;
+    }
+  }
+  

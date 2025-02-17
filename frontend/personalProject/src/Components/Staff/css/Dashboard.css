@@ -1,0 +1,217 @@
+/* 📌 Dashboard Container */
+.dashboard-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* 📌 Center Content */
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📌 Header Section */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* ✅ Welcome Text with Gradient */
+.welcome-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+/* 📌 Logout Button */
+.logout-btn {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #f43f5e, #ec4899);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 📌 Logout Button Hover Effect */
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.2);
+}
+
+/* 📌 Statistics Section */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* 📌 Individual Stat Card */
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: slideUp 0.5s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+}
+
+/* 📌 Stat Card Hover Effect */
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 📌 Stat Card Title */
+.stat-card h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* 📌 Stat Card Subtitle */
+.stat-card p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* 📌 Table Styling */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* 📌 Table Header */
+.custom-table th {
+  background: #f1f5f9;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* 📌 Table Cells */
+.custom-table td {
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+/* 📌 Status & Payment Badges */
+.status-badge,
+.payment-badge {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* 📌 Status Badges */
+.status-badge.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* 📌 Payment Badges */
+.payment-badge.paid {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.payment-badge.pending {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.payment-badge.failed {
+  background: #fcd34d;
+  color: #b45309;
+}
+
+/* 📌 Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+      padding: 1rem;
+  }
+
+  .stats-container {
+      grid-template-columns: 1fr;
+  }
+
+  .custom-table {
+      display: block;
+      overflow-x: auto;
+  }
+
+  .welcome-text {
+      font-size: 1.5rem;
+  }
+
+  .logout-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+  }
+}
